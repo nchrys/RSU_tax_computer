@@ -7,7 +7,7 @@ How to use
 =========
 
 * Install [Jupyter notebook](https://jupyter.org/install)
-* in a repo, using the comand line (cmd) run git clone https://github.com/BasileLeparmentier/RSU_tax_helper.git.
+* in a repo, using the comand line (cmd) run git clone https://github.com/nchrys/RSU_tax_computer.git.
 * From the root of this repo run `jupyter notebook` in the command line
 * Select the file `RSU_tax_computer.ipynb` in your browser
 * You might need to install python dependencies if you have runtime errors (eg: `pip install pandas`)
@@ -18,7 +18,7 @@ How to use
 ## Using Binder:
 (easy for non jupyter common users)
 
-1 -follow this link (takes some time to load sorry) https://mybinder.org/v2/gh/BasileLeparmentier/RSU_tax_helper/HEAD?filepath=RSU_tax_computer.ipynb
+1 -follow this link (takes some time to load sorry) https://mybinder.org/v2/gh/nchrys/RSU_tax_computer/HEAD?labpath=RSU_tax_computer.ipynb
 
 2 - Then fill your data in cell [4], and launch kernel restart and run all in the kernel menu at the top.
 
