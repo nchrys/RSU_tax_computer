@@ -140,7 +140,8 @@ def get_sale_order_from_optionality(sell_event, portfolio,
     for i, event in enumerate(portfolio['available_stock']):
         tax_info = compute_tax_info_from_matched_transaction(sell_event['date'],
                                                              event['date'],
-                                                             selling_price,
+                                                             sell_event[
+                                                               'stock_unit_price_USD'],
                                                              macron_law_id=
                                                              event[
                                                                  'macron_law_id'],
