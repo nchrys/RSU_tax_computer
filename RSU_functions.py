@@ -147,8 +147,9 @@ def get_sale_order_from_optionality(sell_event, portfolio,
                                                              tax_info_dict=tax_info_dict,
                                                              criteo_stock_dict=criteo_stock_dict,
                                                              exchange_rate_dict=exchange_rate_dict)
+        skip_sale_weight = -10000 if event.get('skip_sale')) else 0            
         score_for_sorting = -np.abs(np.log(selling_price / tax_info[
-            'vesting_price'])) - 100 * (tax_info['rebate'] > 0) -1000 * event.get('amount_already_declared',0)
+            'vesting_price'])) - 100 * (tax_info['rebate'] > 0) -1000 * event.get('amount_already_declared',0) + skip_sale_weight
         sale_tax_info.append({'position': i, 'available_stock': event['amount'],
                               'tax': tax_info['tax'],
                               'score_for_sorting': score_for_sorting})
