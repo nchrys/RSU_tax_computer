@@ -244,13 +244,15 @@ def get_sales_result(sell_event, portfolio,
             'vesting_amount_with_moins_value': vested_action_sale[
                                                    'share_sold'] * tax_info[
                                                    'vesting_price_with_moins_value'],
-            'rebate_without_moins_value': vested_action_sale[
+            'rebate_with_moins_value': vested_action_sale[
                                               'share_sold'] *
                                           tax_info[
-                                              'vesting_price'] *
+                                              'vesting_price_with_moins_value'] *
                                           tax_info['rebate'],
             'rebate': tax_info['rebate'],
-            'tax': vested_action_sale['share_sold'] * tax_info['tax']
+            'tax': vested_action_sale['share_sold'] * tax_info['tax'],
+            'macron_law_id': vested_event['macron_law_id']
+
         })
         portfolio['available_stock'][vested_action_sale['position']]['amount'] = \
             portfolio['available_stock'][vested_action_sale['position']][
